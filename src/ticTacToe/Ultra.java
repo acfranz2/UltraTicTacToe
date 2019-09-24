@@ -416,78 +416,41 @@ public class Ultra extends Application {
 	
 	//////////////////////////////////////////////////Score Checking
 	public int check(int giantR, int giantC, int bigR, int bigC) {
-		if(score[giantR][giantC][bigR][bigC][0][0] == score[giantR][giantC][bigR][bigC][0][1] && score[giantR][giantC][bigR][bigC][0][0] == score[giantR][giantC][bigR][bigC][0][2] && score[giantR][giantC][bigR][bigC][0][0] == 1 ||
-				score[giantR][giantC][bigR][bigC][1][0] == score[giantR][giantC][bigR][bigC][1][1] && score[giantR][giantC][bigR][bigC][1][0] == score[giantR][giantC][bigR][bigC][1][2] && score[giantR][giantC][bigR][bigC][1][0] == 1 ||
-				score[giantR][giantC][bigR][bigC][2][0] == score[giantR][giantC][bigR][bigC][2][1] && score[giantR][giantC][bigR][bigC][2][0] == score[giantR][giantC][bigR][bigC][2][2] && score[giantR][giantC][bigR][bigC][2][0] == 1 ||
-				score[giantR][giantC][bigR][bigC][0][0] == score[giantR][giantC][bigR][bigC][1][0] && score[giantR][giantC][bigR][bigC][0][0] == score[giantR][giantC][bigR][bigC][2][0] && score[giantR][giantC][bigR][bigC][0][0] == 1 ||
-				score[giantR][giantC][bigR][bigC][0][1] == score[giantR][giantC][bigR][bigC][1][1] && score[giantR][giantC][bigR][bigC][0][1] == score[giantR][giantC][bigR][bigC][2][1] && score[giantR][giantC][bigR][bigC][0][1] == 1 ||
-				score[giantR][giantC][bigR][bigC][0][2] == score[giantR][giantC][bigR][bigC][1][2] && score[giantR][giantC][bigR][bigC][0][2] == score[giantR][giantC][bigR][bigC][2][2] && score[giantR][giantC][bigR][bigC][0][2] == 1 ||
-				score[giantR][giantC][bigR][bigC][0][0] == score[giantR][giantC][bigR][bigC][1][1] && score[giantR][giantC][bigR][bigC][0][0] == score[giantR][giantC][bigR][bigC][2][2] && score[giantR][giantC][bigR][bigC][0][0] == 1 ||
-				score[giantR][giantC][bigR][bigC][0][2] == score[giantR][giantC][bigR][bigC][1][1] && score[giantR][giantC][bigR][bigC][0][2] == score[giantR][giantC][bigR][bigC][2][0] && score[giantR][giantC][bigR][bigC][0][2] == 1)		
-			return 1;
-		else if(score[giantR][giantC][bigR][bigC][0][0] == score[giantR][giantC][bigR][bigC][0][1] && score[giantR][giantC][bigR][bigC][0][0] == score[giantR][giantC][bigR][bigC][0][2] && score[giantR][giantC][bigR][bigC][0][0] == 2 ||
-				score[giantR][giantC][bigR][bigC][1][0] == score[giantR][giantC][bigR][bigC][1][1] && score[giantR][giantC][bigR][bigC][1][0] == score[giantR][giantC][bigR][bigC][1][2] && score[giantR][giantC][bigR][bigC][1][0] == 2 ||
-				score[giantR][giantC][bigR][bigC][2][0] == score[giantR][giantC][bigR][bigC][2][1] && score[giantR][giantC][bigR][bigC][2][0] == score[giantR][giantC][bigR][bigC][2][2] && score[giantR][giantC][bigR][bigC][2][0] == 2 ||
-				score[giantR][giantC][bigR][bigC][0][0] == score[giantR][giantC][bigR][bigC][1][0] && score[giantR][giantC][bigR][bigC][0][0] == score[giantR][giantC][bigR][bigC][2][0] && score[giantR][giantC][bigR][bigC][0][0] == 2 ||
-				score[giantR][giantC][bigR][bigC][0][1] == score[giantR][giantC][bigR][bigC][1][1] && score[giantR][giantC][bigR][bigC][0][1] == score[giantR][giantC][bigR][bigC][2][1] && score[giantR][giantC][bigR][bigC][0][1] == 2 ||
-				score[giantR][giantC][bigR][bigC][0][2] == score[giantR][giantC][bigR][bigC][1][2] && score[giantR][giantC][bigR][bigC][0][2] == score[giantR][giantC][bigR][bigC][2][2] && score[giantR][giantC][bigR][bigC][0][2] == 2 ||
-				score[giantR][giantC][bigR][bigC][0][0] == score[giantR][giantC][bigR][bigC][1][1] && score[giantR][giantC][bigR][bigC][0][0] == score[giantR][giantC][bigR][bigC][2][2] && score[giantR][giantC][bigR][bigC][0][0] == 2 ||
-				score[giantR][giantC][bigR][bigC][0][2] == score[giantR][giantC][bigR][bigC][1][1] && score[giantR][giantC][bigR][bigC][0][2] == score[giantR][giantC][bigR][bigC][2][0] && score[giantR][giantC][bigR][bigC][0][2] == 2)		
-			return 2;
-		else if(score[giantR][giantC][bigR][bigC][0][0] != 0 && score[giantR][giantC][bigR][bigC][0][1] != 0 && score[giantR][giantC][bigR][bigC][0][2] != 0 &&
-				score[giantR][giantC][bigR][bigC][1][0] != 0 && score[giantR][giantC][bigR][bigC][1][1] != 0 && score[giantR][giantC][bigR][bigC][1][2] != 0 &&
-				score[giantR][giantC][bigR][bigC][2][0] != 0 && score[giantR][giantC][bigR][bigC][2][1] != 0 && score[giantR][giantC][bigR][bigC][2][2] != 0)
-			return 3;
-		else
-			return 0;
+		return genCheck(score[giantR][giantC][bigR][bigC]);
 	}
 	
 	public int bigCheck(int giantR, int giantC) {
-		if(bigScore[giantR][giantC][0][0] == bigScore[giantR][giantC][0][1] && bigScore[giantR][giantC][0][0] == bigScore[giantR][giantC][0][2] && bigScore[giantR][giantC][0][0] == 1 ||
-				bigScore[giantR][giantC][1][0] == bigScore[giantR][giantC][1][1] && bigScore[giantR][giantC][1][0] == bigScore[giantR][giantC][1][2] && bigScore[giantR][giantC][1][0] == 1 ||
-				bigScore[giantR][giantC][2][0] == bigScore[giantR][giantC][2][1] && bigScore[giantR][giantC][2][0] == bigScore[giantR][giantC][2][2] && bigScore[giantR][giantC][2][0] == 1 ||
-				bigScore[giantR][giantC][0][0] == bigScore[giantR][giantC][1][0] && bigScore[giantR][giantC][0][0] == bigScore[giantR][giantC][2][0] && bigScore[giantR][giantC][0][0] == 1 ||
-				bigScore[giantR][giantC][0][1] == bigScore[giantR][giantC][1][1] && bigScore[giantR][giantC][0][1] == bigScore[giantR][giantC][2][1] && bigScore[giantR][giantC][0][1] == 1 ||
-				bigScore[giantR][giantC][0][2] == bigScore[giantR][giantC][1][2] && bigScore[giantR][giantC][0][2] == bigScore[giantR][giantC][2][2] && bigScore[giantR][giantC][0][2] == 1 ||
-				bigScore[giantR][giantC][0][0] == bigScore[giantR][giantC][1][1] && bigScore[giantR][giantC][0][0] == bigScore[giantR][giantC][2][2] && bigScore[giantR][giantC][0][0] == 1 ||
-				bigScore[giantR][giantC][0][2] == bigScore[giantR][giantC][1][1] && bigScore[giantR][giantC][0][2] == bigScore[giantR][giantC][2][0] && bigScore[giantR][giantC][0][2] == 1)		
-			return 1;
-		if(bigScore[giantR][giantC][0][0] == bigScore[giantR][giantC][0][1] && bigScore[giantR][giantC][0][0] == bigScore[giantR][giantC][0][2] && bigScore[giantR][giantC][0][0] == 2 ||
-				bigScore[giantR][giantC][1][0] == bigScore[giantR][giantC][1][1] && bigScore[giantR][giantC][1][0] == bigScore[giantR][giantC][1][2] && bigScore[giantR][giantC][1][0] == 2 ||
-				bigScore[giantR][giantC][2][0] == bigScore[giantR][giantC][2][1] && bigScore[giantR][giantC][2][0] == bigScore[giantR][giantC][2][2] && bigScore[giantR][giantC][2][0] == 2 ||
-				bigScore[giantR][giantC][0][0] == bigScore[giantR][giantC][1][0] && bigScore[giantR][giantC][0][0] == bigScore[giantR][giantC][2][0] && bigScore[giantR][giantC][0][0] == 2 ||
-				bigScore[giantR][giantC][0][1] == bigScore[giantR][giantC][1][1] && bigScore[giantR][giantC][0][1] == bigScore[giantR][giantC][2][1] && bigScore[giantR][giantC][0][1] == 2 ||
-				bigScore[giantR][giantC][0][2] == bigScore[giantR][giantC][1][2] && bigScore[giantR][giantC][0][2] == bigScore[giantR][giantC][2][2] && bigScore[giantR][giantC][0][2] == 2 ||
-				bigScore[giantR][giantC][0][0] == bigScore[giantR][giantC][1][1] && bigScore[giantR][giantC][0][0] == bigScore[giantR][giantC][2][2] && bigScore[giantR][giantC][0][0] == 2 ||
-				bigScore[giantR][giantC][0][2] == bigScore[giantR][giantC][1][1] && bigScore[giantR][giantC][0][2] == bigScore[giantR][giantC][2][0] && bigScore[giantR][giantC][0][2] == 2)		
-			return 2;
-		else if(bigScore[giantR][giantC][0][0] != 0 && bigScore[giantR][giantC][0][1] != 0 && bigScore[giantR][giantC][0][2] != 0 &&
-				bigScore[giantR][giantC][1][0] != 0 && bigScore[giantR][giantC][1][1] != 0 && bigScore[giantR][giantC][1][2] != 0 &&
-				bigScore[giantR][giantC][2][0] != 0 && bigScore[giantR][giantC][2][1] != 0 && bigScore[giantR][giantC][2][2] != 0)
-			return 3;
-		return 0;
+		return genCheck(bigScore[giantR][giantC]);
 	}
 	
 	
 	public int giantCheck() {
-		if(giantScore[0][0] == giantScore[0][1] && giantScore[0][0] == giantScore[0][2] && giantScore[0][0] == 1 ||
-				giantScore[1][0] == giantScore[1][1] && giantScore[1][0] == giantScore[1][2] && giantScore[1][0] == 1 ||
-				giantScore[2][0] == giantScore[2][1] && giantScore[2][0] == giantScore[2][2] && giantScore[2][0] == 1 ||
-				giantScore[0][0] == giantScore[1][0] && giantScore[0][0] == giantScore[2][0] && giantScore[0][0] == 1 ||
-				giantScore[0][1] == giantScore[1][1] && giantScore[0][1] == giantScore[2][1] && giantScore[0][1] == 1 ||
-				giantScore[0][2] == giantScore[1][2] && giantScore[0][2] == giantScore[2][2] && giantScore[0][2] == 1 ||
-				giantScore[0][0] == giantScore[1][1] && giantScore[0][0] == giantScore[2][2] && giantScore[0][0] == 1 ||
-				giantScore[0][2] == giantScore[1][1] && giantScore[0][2] == giantScore[2][0] && giantScore[0][2] == 1)		
+		return genCheck(giantScore);
+	}
+
+	private int genCheck(int[][] score){
+		if(score[0][0] == score[0][1] && score[0][0] == score[0][2] && score[0][0] == 1 ||
+				score[1][0] == score[1][1] && score[1][0] == score[1][2] && score[1][0] == 1 ||
+				score[2][0] == score[2][1] && score[2][0] == score[2][2] && score[2][0] == 1 ||
+				score[0][0] == score[1][0] && score[0][0] == score[2][0] && score[0][0] == 1 ||
+				score[0][1] == score[1][1] && score[0][1] == score[2][1] && score[0][1] == 1 ||
+				score[0][2] == score[1][2] && score[0][2] == score[2][2] && score[0][2] == 1 ||
+				score[0][0] == score[1][1] && score[0][0] == score[2][2] && score[0][0] == 1 ||
+				score[0][2] == score[1][1] && score[0][2] == score[2][0] && score[0][2] == 1)		
 			return 1;
-		if(giantScore[0][0] == giantScore[0][1] && giantScore[0][0] == giantScore[0][2] && giantScore[0][0] == 2 ||
-				giantScore[1][0] == giantScore[1][1] && giantScore[1][0] == giantScore[1][2] && giantScore[1][0] == 2 ||
-				giantScore[2][0] == giantScore[2][1] && giantScore[2][0] == giantScore[2][2] && giantScore[2][0] == 2 ||
-				giantScore[0][0] == giantScore[1][0] && giantScore[0][0] == giantScore[2][0] && giantScore[0][0] == 2 ||
-				giantScore[0][1] == giantScore[1][1] && giantScore[0][1] == giantScore[2][1] && giantScore[0][1] == 2 ||
-				giantScore[0][2] == giantScore[1][2] && giantScore[0][2] == giantScore[2][2] && giantScore[0][2] == 2 ||
-				giantScore[0][0] == giantScore[1][1] && giantScore[0][0] == giantScore[2][2] && giantScore[0][0] == 2 ||
-				giantScore[0][2] == giantScore[1][1] && giantScore[0][2] == giantScore[2][0] && giantScore[0][2] == 2)		
+		else if(score[0][0] == score[0][1] && score[0][0] == score[0][2] && score[0][0] == 2 ||
+				score[1][0] == score[1][1] && score[1][0] == score[1][2] && score[1][0] == 2 ||
+				score[2][0] == score[2][1] && score[2][0] == score[2][2] && score[2][0] == 2 ||
+				score[0][0] == score[1][0] && score[0][0] == score[2][0] && score[0][0] == 2 ||
+				score[0][1] == score[1][1] && score[0][1] == score[2][1] && score[0][1] == 2 ||
+				score[0][2] == score[1][2] && score[0][2] == score[2][2] && score[0][2] == 2 ||
+				score[0][0] == score[1][1] && score[0][0] == score[2][2] && score[0][0] == 2 ||
+				score[0][2] == score[1][1] && score[0][2] == score[2][0] && score[0][2] == 2)		
 			return 2;
+		else if(score[0][0] != 0 && score[0][1] != 0 && score[0][2] != 0 &&
+			score[1][0] != 0 && score[1][1] != 0 && score[1][2] != 0 &&
+			score[2][0] != 0 && score[2][1] != 0 && score[2][2] != 0)
+			return 3;	
 		return 0;
 	}
 

@@ -22,17 +22,13 @@ public class X extends Polygon{
 	}
 	
 	public Shape draw() {
-		X.union(up, down);
+		ex = X.union(up, down);
 		return ex;
 	}
-	
-
 	
 	public Shape vis(boolean seen) {
 		ex.setVisible(seen);
 		ex.setFill(c);;
 		return ex;
 	}
-	
-
 }
