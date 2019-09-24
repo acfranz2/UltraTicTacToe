@@ -26,6 +26,7 @@ public class Ultra extends Application {
 	private int count = 0;
 	private Rectangle[][][][][][] playable;
 	private Rectangle[][][][][][] playTo;
+	private double sceneWidth;
 	
 	public void start(Stage primaryStage) throws Exception {
 		
@@ -51,7 +52,7 @@ public class Ultra extends Application {
 		
 		Group root = new Group();
 		GridPane btns = new GridPane();
-		Scene scene = new Scene(root, 626.4, 626.4);
+		Scene scene = new Scene(root, 700, 700);
 		
 		h = scene.getHeight();
 		double buf = h/100;
@@ -131,7 +132,7 @@ public class Ultra extends Application {
 							for(int col = 0; col < btn.length; col++) {
 								btn[giantRow][giantCol][bigRow][bigCol][row][col] = new UCell(giantRow, giantCol, bigRow, bigCol, row, col);
 								btn[giantRow][giantCol][bigRow][bigCol][row][col].setMinHeight(1);
-								btn[giantRow][giantCol][bigRow][bigCol][row][col].setPrefSize(23.2, 23.2);
+								btn[giantRow][giantCol][bigRow][bigCol][row][col].setPrefSize(h/27, h/27);
 								btn[giantRow][giantCol][bigRow][bigCol][row][col].setOpacity(.4);
 		
 								btns.add(btn[giantRow][giantCol][bigRow][bigCol][row][col], (int)((col*h/27)+(bigCol*h/9)+(giantCol*h/3)), (int)((row*h/27)+(bigRow*h/9)+(giantRow*h/3)));
@@ -373,8 +374,6 @@ public class Ultra extends Application {
 					for(int bc = 0; bc < btn.length; bc++)
 						for(int r = 0; r < btn.length; r++)
 							for(int c = 0; c < btn.length; c++) {
-								
-								
 								if(giantScore[bigR][bigC] == 0) {
 									if(bigScore[bigR][bigC][row][col] == 0) {
 										if(gr == bigR && gc == bigC && br == row && bc == col) {
@@ -413,7 +412,6 @@ public class Ultra extends Application {
 	}
 	
 	
-	
 	//////////////////////////////////////////////////Score Checking
 	public int check(int giantR, int giantC, int bigR, int bigC) {
 		return genCheck(score[giantR][giantC][bigR][bigC]);
@@ -422,7 +420,6 @@ public class Ultra extends Application {
 	public int bigCheck(int giantR, int giantC) {
 		return genCheck(bigScore[giantR][giantC]);
 	}
-	
 	
 	public int giantCheck() {
 		return genCheck(giantScore);
