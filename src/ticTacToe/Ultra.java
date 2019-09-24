@@ -9,8 +9,6 @@ import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.stage.*;
 import javafx.scene.input.*;
-import java.net.*;
-import java.io.*;
 
 public class Ultra extends Application {
 
@@ -492,19 +490,8 @@ public class Ultra extends Application {
 			return 2;
 		return 0;
 	}
-	
-	
 
 	public static void main(String args[]){   
 		launch(args);
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }

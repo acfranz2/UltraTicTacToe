@@ -1,16 +1,8 @@
 package ticTacToe;
 
-import javafx.animation.*;
-import javafx.application.*;
-import javafx.css.*;
-import javafx.event.*;
-import javafx.geometry.*;
-import javafx.scene.*;
+
 import javafx.scene.shape.*;
-import javafx.scene.control.*;
-import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
-import javafx.stage.*;
 
 public class X extends Polygon{
 	
@@ -30,7 +22,7 @@ public class X extends Polygon{
 	}
 	
 	public Shape draw() {
-		ex = ex.union(up, down);
+		X.union(up, down);
 		return ex;
 	}
 	
