@@ -26,7 +26,6 @@ public class Ultra extends Application {
 	private int count = 0;
 	private Rectangle[][][][][][] playable;
 	private Rectangle[][][][][][] playTo;
-	private double sceneWidth;
 	
 	public void start(Stage primaryStage) throws Exception {
 		

@@ -1,10 +1,7 @@
 package ticTacToe;
 
-import javafx.animation.*;
 import javafx.application.*;
-import javafx.css.*;
 import javafx.event.*;
-import javafx.geometry.*;
 import javafx.scene.*;
 import javafx.scene.shape.*;
 import javafx.scene.control.*;
@@ -266,8 +263,6 @@ public class TTT extends Application{
 		if(bigCheck() == 2) {
 			System.out.println("X's win!");
 		}
-		
-		System.out.println(br + " " + bc + " " + r + " " + c);
 	}	
 	
 	
