@@ -25,7 +25,11 @@ public class TTT extends Application{
 	
 	public void start(Stage primaryStage) throws Exception {
 
-		
+		/*
+			[[ 1, 2, 3],
+			[4, 5, 6]]
+
+		*/
 		
 		
 		Group root = new Group();
